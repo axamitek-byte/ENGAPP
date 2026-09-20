@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>English Learning Platform</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header><h1>English Learning Platform</h1><p>Classes · Reading Lab · Vocabulary · Grammar · Tests · Results</p></header>
+<main>
+<section id="setup" class="card hidden"><h2>One-time setup needed</h2><p>Open <b>config.js</b> and paste your Supabase Project URL and anon/publishable key. Then reload the page.</p></section>
+<section id="login" class="card"><h2>Teacher login</h2><input id="email" type="email" placeholder="Teacher email"><input id="pw" type="password" placeholder="Password"><button onclick="login()">Log in</button><p id="loginMsg"></p><hr><h2>Student</h2><button onclick="studentJoin()">Join a class</button></section>
+<section id="teacher" class="hidden"><nav><button onclick="tab('classes')">Classes</button><button onclick="tab('reading')">Reading Lab</button><button onclick="tab('vocab')">Vocabulary</button><button onclick="tab('grammar')">Grammar</button><button onclick="tab('tests')">Tests</button><button onclick="tab('results')">Results</button><button class="secondary" onclick="logout()">Log out</button></nav><div id="content"></div></section>
+<section id="join" class="card hidden"><h2>Join a class</h2><input id="code" placeholder="Room code"><input id="name" placeholder="Your name"><button onclick="join()">Continue</button><button class="secondary" onclick="show('login')">Back</button><p id="msg"></p></section>
+<section id="student" class="hidden"></section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js"></script><script src="app.js"></script>
+</body></html>
